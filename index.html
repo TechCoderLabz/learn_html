@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="card-component.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="navbar bg-base-100 shadow-sm">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h7"
+              />
+            </svg>
+          </div>
+          <ul
+            tabindex="-1"
+            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+          >
+            <li><a>Homepage</a></li>
+            <li><a>Portfolio</a></li>
+            <li><a>About</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="navbar-center">
+        <a class="btn btn-ghost text-xl">daisyUI</a>
+      </div>
+      <div class="navbar-end">
+        <button class="btn btn-ghost btn-circle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+            />
+          </svg>
+        </button>
+        <button class="btn btn-ghost btn-circle">
+          <div class="indicator">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+              />
+            </svg>
+            <span class="badge badge-xs badge-primary indicator-item"></span>
+          </div>
+        </button>
+      </div>
+    </div>
+
+    <div
+      class="overflow-x-auto rounded-box border border-base-content/5 bg-base-100"
+    >
+      <table class="table">
+        <tbody>
+          <tr>
+            <td>
+              <card-component
+                title="Manual physiotherapy"
+                subtitle="Manual physiotherapy is a hands-on treatment approach focused on restoring movement, reducing pain, and improving physical function. It uses techniques such as joint mobilization, soft tissue release, stretching, and guided exercises tailored to the individual. By addressing muscle imbalances, joint stiffness, and movement dysfunctions, manual physiotherapy helps the body heal naturally. It is commonly used for back and neck pain, postural issues, post-surgical recovery, and chronic musculoskeletal conditions, promoting long-term mobility and overall physical well-being."
+                image="https://movebetterphysiotherapyclinic.com/wp-content/uploads/elementor/thumbs/Untitled-design-2-rhs1m8cvwynhtzlwy0bfo05m1d4n6cofx1trmx3kww.png"
+              />
+            </td>
+            <td>
+              <card-component
+                title="Electro Therapy"
+                subtitle="The SONOMED 9S is a combination therapy device that integrates ultrasound therapy and electrotherapy currents such as IFT, TENS, Muscles Stimulator currents Such as Galvanic Current and Faradic Current, Ultra Reiz, Lower Frequency Current such as Diadynamic current and Russian stimulation to treat:
+
+✔ Chronic and acute musculoskeletal pain
+✔ Soft tissue injuries
+✔ Post-operative rehabilitation
+✔ Sports injuries
+✔ Muscle weakness and atrophy
+✔ Chronic joint problems"
+                image="https://movebetterphysiotherapyclinic.com/wp-content/uploads/2024/09/Shock-Wave-Therapy.png"
+              />
+            </td>
+            <td>
+              <card-component
+                title="TECAR Therapy"
+                subtitle="Tecar Therapy (Transfer of Energy Capacitive and Resistive) is an advanced, non-invasive treatment that uses high-frequency electrical energy to stimulate the body’s natural healing processes. It improves blood circulation, reduces inflammation, and accelerates tissue repair by generating deep therapeutic warmth. Tecar Therapy is widely used for muscle injuries, joint pain, tendon problems, and post-operative rehabilitation. The treatment is comfortable, effective, and often combined with manual therapy to enhance recovery speed and improve functional outcomes."
+                image="https://movebetterphysiotherapyclinic.com/wp-content/uploads/elementor/thumbs/WhatsApp-Image-2026-02-07-at-4.41.38-PM-riuk6rt41qmsnh1rephjzqm2rkusp5vtgziczxcihs.jpeg"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
