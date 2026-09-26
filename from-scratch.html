@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script>
+      let tasks = JSON.parse(localStorage.getItem("tasks") ?? "[]");
+
+      function onLoadEvent() {
+        console.log("page loaded");
+        generateTaskList();
+      }
+
+      function forEachTaskItem(task, index) {
+        return (
+          "<li><input type='checkbox' name='' onclick='tasks.splice(" +
+          index +
+          ",1); generateTaskList();'>" +
+          task +
+          "</li>"
+        );
+      }
+
+      function generateTaskList() {
+        let taskListHTMLString = "";
+        tasks.forEach((task, index) => {
+          taskListHTMLString += forEachTaskItem(task, index);
+        });
+        document.getElementById("taskList").innerHTML = taskListHTMLString;
+      }
+
+      window.addEventListener("load", onLoadEvent);
+
+      function onAddTaskClicked() {
+        let text = document.getElementById("taskText").value;
+        tasks.push(text);
+        localStorage.setItem('tasks', JSON.stringify(tasks))
+        generateTaskList();
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" name="taskText" id="taskText" />
+    <button onclick="onAddTaskClicked()">Add Task</button>
+    <ul id="taskList"></ul>
+  </body>
+</html>

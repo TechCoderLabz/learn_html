@@ -3,20 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Move Better Physiotherapy Clinic</title>
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
       rel="stylesheet"
       type="text/css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script src="card-component.js" type="text/javascript"></script>
+    <!-- Brand colors picked from images/logo.webp (navy + cyan) so every button matches the logo -->
+    <style>
+      :root {
+        --color-primary: #123e64;
+        --color-primary-content: #ffffff;
+        --color-secondary: #30b7db;
+        --color-secondary-content: #072433;
+      }
+    </style>
   </head>
+
   <body>
-    <div class="navbar bg-base-100 shadow-sm">
+    <!-- ============ NAVBAR ============ -->
+    <div class="navbar bg-base-100 shadow-sm sticky top-0 z-10">
       <div class="navbar-start">
         <div class="dropdown">
-          <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="h-5 w-5"
@@ -36,91 +46,439 @@
             tabindex="-1"
             class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
-            <li><a>Homepage</a></li>
-            <li><a>Portfolio</a></li>
-            <li><a>About</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
+        <a href="#home" class="btn btn-ghost">
+          <img src="images/logo.webp" alt="Move Better logo" class="h-14 w-auto" />
+        </a>
       </div>
-      <div class="navbar-center">
-        <a class="btn btn-ghost text-xl">daisyUI</a>
+      <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </div>
       <div class="navbar-end">
-        <button class="btn btn-ghost btn-circle">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            />
-          </svg>
-        </button>
-        <button class="btn btn-ghost btn-circle">
-          <div class="indicator">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
-              />
-            </svg>
-            <span class="badge badge-xs badge-primary indicator-item"></span>
-          </div>
-        </button>
+        <a href="#contact" class="btn btn-primary">Book An Appointment</a>
       </div>
     </div>
 
-    <div
-      class="overflow-x-auto rounded-box border border-base-content/5 bg-base-100"
-    >
-      <table class="table">
-        <tbody>
-          <tr>
-            <td>
-              <card-component
-                title="Manual physiotherapy"
-                subtitle="Manual physiotherapy is a hands-on treatment approach focused on restoring movement, reducing pain, and improving physical function. It uses techniques such as joint mobilization, soft tissue release, stretching, and guided exercises tailored to the individual. By addressing muscle imbalances, joint stiffness, and movement dysfunctions, manual physiotherapy helps the body heal naturally. It is commonly used for back and neck pain, postural issues, post-surgical recovery, and chronic musculoskeletal conditions, promoting long-term mobility and overall physical well-being."
-                image="https://movebetterphysiotherapyclinic.com/wp-content/uploads/elementor/thumbs/Untitled-design-2-rhs1m8cvwynhtzlwy0bfo05m1d4n6cofx1trmx3kww.png"
-              />
-            </td>
-            <td>
-              <card-component
-                title="Electro Therapy"
-                subtitle="The SONOMED 9S is a combination therapy device that integrates ultrasound therapy and electrotherapy currents such as IFT, TENS, Muscles Stimulator currents Such as Galvanic Current and Faradic Current, Ultra Reiz, Lower Frequency Current such as Diadynamic current and Russian stimulation to treat:
-</br></br>
-✔ Chronic and acute musculoskeletal pain</br>
-✔ Soft tissue injuries</br>
-✔ Post-operative rehabilitation</br>
-✔ Sports injuries</br>
-✔ Muscle weakness and atrophy</br>
-✔ Chronic joint problems"
-                image="https://movebetterphysiotherapyclinic.com/wp-content/uploads/2024/09/Shock-Wave-Therapy.png"
-              />
-            </td>
-            <td>
-              <card-component
-                title="TECAR Therapy"
-                subtitle="Tecar Therapy (Transfer of Energy Capacitive and Resistive) is an advanced, non-invasive treatment that uses high-frequency electrical energy to stimulate the body’s natural healing processes. It improves blood circulation, reduces inflammation, and accelerates tissue repair by generating deep therapeutic warmth. Tecar Therapy is widely used for muscle injuries, joint pain, tendon problems, and post-operative rehabilitation. The treatment is comfortable, effective, and often combined with manual therapy to enhance recovery speed and improve functional outcomes."
-                image="https://movebetterphysiotherapyclinic.com/wp-content/uploads/elementor/thumbs/WhatsApp-Image-2026-02-07-at-4.41.38-PM-riuk6rt41qmsnh1rephjzqm2rkusp5vtgziczxcihs.jpeg"
-              />
-            </td>
-          </tr>
-        </tbody>
-      </table>
+    <!-- ============ HERO ============ -->
+    <div id="home" class="hero bg-base-200 min-h-[70vh]">
+      <div class="hero-content flex-col lg:flex-row-reverse gap-10 min-w-0">
+        <img
+          src="images/logo.webp"
+          alt="Move Better Physiotherapy Clinic"
+          class="max-w-xs rounded-lg"
+        />
+        <div class="min-w-0">
+          <h1 class="text-4xl font-bold">
+            Welcome To Move Better Physiotherapy Clinic
+          </h1>
+          <p class="py-6">
+            At Move Better Clinic, we believe that movement is the foundation
+            of a healthy and independent life. Our mission is simple yet
+            powerful — to make every life better by restoring movement,
+            reducing pain, and improving overall quality of life.
+          </p>
+          <a href="#contact" class="btn btn-primary">Book An Appointment Now</a>
+        </div>
+      </div>
     </div>
+
+    <!-- ============ ABOUT ============ -->
+    <div id="about" class="hero bg-base-100 py-16">
+      <div class="hero-content flex-col lg:flex-row gap-10 min-w-0">
+        <img
+          src="images/about-doctor.jpeg"
+          alt="Dr. Kajal Patel"
+          class="max-w-xs rounded-lg shadow-xl"
+        />
+        <div class="min-w-0">
+          <h2 class="text-3xl font-bold mb-4">About Dr. Kajal Patel</h2>
+          <p class="mb-3">
+            Dr. Kajal Patel is a US-trained, highly experienced physiotherapist
+            based in Wadgaon Sheri, Pune. She is known for her patient-centered
+            approach and specializes in treating musculoskeletal disorders,
+            sports injuries, post-surgical rehabilitation, and chronic pain
+            management.
+          </p>
+          <p>
+            Practicing at Move Better Physiotherapy Clinic, Dr. Patel combines
+            advanced evidence-based techniques with personalized treatment
+            plans to ensure optimal recovery and long-term results. Recognized
+            as the Best Physiotherapist in Pune, she is dedicated to helping
+            patients regain strength, mobility, and overall well-being.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ STATS ============ -->
+    <div class="flex justify-center bg-base-200 py-10 px-4">
+      <div class="stats stats-horizontal shadow max-w-full overflow-x-auto">
+        <div class="stat place-items-center px-3 sm:px-6">
+          <div class="stat-title text-xs sm:text-sm">Rating</div>
+          <div class="stat-value text-xl sm:text-3xl">5</div>
+          <div class="stat-desc text-xs">out of 5 stars</div>
+        </div>
+        <div class="stat place-items-center px-3 sm:px-6">
+          <div class="stat-title text-xs sm:text-sm">Patients Treated</div>
+          <div class="stat-value text-xl sm:text-3xl">15,000+</div>
+        </div>
+        <div class="stat place-items-center px-3 sm:px-6">
+          <div class="stat-title text-xs sm:text-sm">Experience</div>
+          <div class="stat-value text-xl sm:text-3xl">12+</div>
+        </div>
+        <div class="stat place-items-center px-3 sm:px-6">
+          <div class="stat-title text-xs sm:text-sm">Happy Clients Ratio</div>
+          <div class="stat-value text-xl sm:text-3xl">95%</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ SERVICES ============ -->
+    <div id="services" class="bg-base-100 py-16 px-6">
+      <h2 class="text-3xl font-bold text-center mb-10">
+        Physiotherapy Services
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div class="card bg-base-100 shadow-sm">
+          <figure>
+            <img src="images/service-manual-therapy.png" alt="Manual Physiotherapy" />
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title">Manual Physiotherapy</h3>
+            <p>
+              Manual physiotherapy is a hands-on treatment approach focused
+              on restoring movement, reducing pain, and improving physical
+              function. It uses techniques such as joint mobilization, soft
+              tissue release, stretching, and guided exercises tailored to
+              the individual. By addressing muscle imbalances, joint
+              stiffness, and movement dysfunctions, manual physiotherapy
+              helps the body heal naturally. It is commonly used for back
+              and neck pain, postural issues, post-surgical recovery, and
+              chronic musculoskeletal conditions, promoting long-term
+              mobility and overall physical well-being.
+            </p>
+          </div>
+        </div>
+        <div class="card bg-base-100 shadow-sm">
+          <figure>
+            <img src="images/service-electro-therapy.png" alt="Electro Therapy" />
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title">Electro Therapy</h3>
+            <p>
+              The SONOMED 9S is a combination therapy device that integrates
+              ultrasound therapy and electrotherapy currents such as IFT,
+              TENS, Muscle Stimulator currents such as Galvanic Current and
+              Faradic Current, Ultra Reiz, and Lower Frequency Currents such
+              as Diadynamic current and Russian stimulation to treat:
+            </p>
+            <ul class="list-none text-sm mt-2 space-y-1">
+              <li>✔ Chronic and acute musculoskeletal pain</li>
+              <li>✔ Soft tissue injuries</li>
+              <li>✔ Post-operative rehabilitation</li>
+              <li>✔ Sports injuries</li>
+              <li>✔ Muscle weakness and atrophy</li>
+              <li>✔ Chronic joint problems</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card bg-base-100 shadow-sm">
+          <figure>
+            <img src="images/service-tecar-therapy.jpeg" alt="TECAR Therapy" />
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title">TECAR Therapy</h3>
+            <p>
+              Tecar Therapy (Transfer of Energy Capacitive and Resistive) is
+              an advanced, non-invasive treatment that uses high-frequency
+              electrical energy to stimulate the body's natural healing
+              processes. It improves blood circulation, reduces
+              inflammation, and accelerates tissue repair by generating deep
+              therapeutic warmth. Tecar Therapy is widely used for muscle
+              injuries, joint pain, tendon problems, and post-operative
+              rehabilitation. The treatment is comfortable, effective, and
+              often combined with manual therapy to enhance recovery speed
+              and improve functional outcomes.
+            </p>
+          </div>
+        </div>
+        <div class="card bg-base-100 shadow-sm">
+          <figure>
+            <img src="images/gallery-1.webp" alt="Osteopathy" />
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title">Osteopathy</h3>
+            <p>
+              Osteopathy is a holistic, hands-on healthcare approach that
+              focuses on the relationship between the body's structure and
+              function. Osteopaths use gentle manual techniques to improve
+              joint mobility, release muscle tension, and enhance
+              circulation and nervous system function. Rather than treating
+              symptoms alone, osteopathy aims to address the root cause of
+              pain or dysfunction. It is effective for back pain, headaches,
+              sports injuries, digestive issues, and postural problems,
+              supporting the body's natural ability to heal and maintain
+              balance.
+            </p>
+          </div>
+        </div>
+        <div class="card bg-base-100 shadow-sm">
+          <figure>
+            <img src="images/gallery-3.webp" alt="Sports Injury Management" />
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title">Sports Injury Management</h3>
+            <p>
+              Sports injury management focuses on the prevention, diagnosis,
+              treatment, and rehabilitation of injuries related to physical
+              activity. It combines physiotherapy, manual therapy, exercise
+              prescription, and injury-specific techniques to restore
+              strength, mobility, and performance. The approach is tailored
+              to the athlete's sport, fitness level, and goals. Effective
+              sports injury management not only treats acute and chronic
+              injuries but also reduces the risk of re-injury, helping
+              individuals return safely and confidently to training and
+              competition.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ WHY CHOOSE US ============ -->
+    <div class="bg-base-200 py-16 px-6">
+      <h2 class="text-3xl font-bold text-center mb-10">
+        Why People Love Our Clinic
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div class="card bg-base-100 shadow-sm">
+          <div class="card-body items-center text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-9 w-9 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733-2.588 0-4.687 2.015-4.687 4.5 0 7.22 9 12 9 12s9-4.78 9-12z" />
+            </svg>
+            <h3 class="card-title text-base">Personal Care</h3>
+            <p class="text-sm">Treatment planned as per your body and comfort.</p>
+          </div>
+        </div>
+        <div class="card bg-base-100 shadow-sm">
+          <div class="card-body items-center text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-9 w-9 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+            </svg>
+            <h3 class="card-title text-base">Latest Therapy Methods</h3>
+            <p class="text-sm">Modern treatments for better recovery.</p>
+          </div>
+        </div>
+        <div class="card bg-base-100 shadow-sm">
+          <div class="card-body items-center text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-9 w-9 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2" />
+              <circle cx="12" cy="12" r="9" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <h3 class="card-title text-base">Fast Pain Relief</h3>
+            <p class="text-sm">Helps reduce pain and stiffness quickly.</p>
+          </div>
+        </div>
+        <div class="card bg-base-100 shadow-sm">
+          <div class="card-body items-center text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-9 w-9 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" />
+            </svg>
+            <h3 class="card-title text-base">Clean &amp; Calm Clinic</h3>
+            <p class="text-sm">Comfortable and friendly environment.</p>
+          </div>
+        </div>
+        <div class="card bg-base-100 shadow-sm">
+          <div class="card-body items-center text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-9 w-9 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.964 0a9 9 0 10-11.964 0m11.964 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            <h3 class="card-title text-base">One-to-One Attention</h3>
+            <p class="text-sm">Full focus on each patient.</p>
+          </div>
+        </div>
+        <div class="card bg-base-100 shadow-sm">
+          <div class="card-body items-center text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-9 w-9 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443" />
+            </svg>
+            <h3 class="card-title text-base">Experienced Staff</h3>
+            <p class="text-sm">Our skilled team gives you the best care possible.</p>
+          </div>
+        </div>
+        <div class="card bg-base-100 shadow-sm">
+          <div class="card-body items-center text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-9 w-9 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="9" stroke-linecap="round" stroke-linejoin="round" />
+              <circle cx="12" cy="12" r="5" stroke-linecap="round" stroke-linejoin="round" />
+              <circle cx="12" cy="12" r="1" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <h3 class="card-title text-base">Root Cause Treatment</h3>
+            <p class="text-sm">We treat the main problem, not just the pain.</p>
+          </div>
+        </div>
+        <div class="card bg-base-100 shadow-sm">
+          <div class="card-body items-center text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-9 w-9 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.276a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L1.5 3l1.5-1.5L7.5 4.5v1.409l4.26 4.26" />
+            </svg>
+            <h3 class="card-title text-base">Emergency Help</h3>
+            <p class="text-sm">Fast care when you need it most.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ TREATMENT PROCESS ============ -->
+    <div class="bg-base-100 py-16 px-6">
+      <h2 class="text-3xl font-bold text-center mb-10">
+        What Is Our Therapy Process
+      </h2>
+      <ul
+        class="steps steps-horizontal w-full max-w-5xl mx-auto overflow-x-auto"
+        style="grid-auto-columns: minmax(9rem, 1fr)"
+      >
+        <li class="step step-primary">
+          <div class="mt-2 flex flex-col items-center">
+            <img src="images/process-1-consultation.png" alt="Initial Consultation" class="w-24 h-24 rounded-full object-cover mb-2" />
+            <p class="font-semibold">Initial Consultation</p>
+            <p class="text-sm max-w-[14rem]">A detailed assessment of your condition.</p>
+          </div>
+        </li>
+        <li class="step step-primary">
+          <div class="mt-2 flex flex-col items-center">
+            <img src="images/process-2-plan.png" alt="Tailored Treatment Plan" class="w-24 h-24 rounded-full object-cover mb-2" />
+            <p class="font-semibold">Tailored Treatment Plan</p>
+            <p class="text-sm max-w-[14rem]">A customized plan based on the assessment.</p>
+          </div>
+        </li>
+        <li class="step step-primary">
+          <div class="mt-2 flex flex-col items-center">
+            <img src="images/process-3-therapy.png" alt="Hands-On Therapy" class="w-24 h-24 rounded-full object-cover mb-2" />
+            <p class="font-semibold">Hands-On Therapy</p>
+            <p class="text-sm max-w-[14rem]">Manual techniques applied by our therapists.</p>
+          </div>
+        </li>
+        <li class="step step-primary">
+          <div class="mt-2 flex flex-col items-center">
+            <img src="images/process-4-monitoring.jpeg" alt="Progress Monitoring" class="w-24 h-24 rounded-full object-cover mb-2" />
+            <p class="font-semibold">Progress Monitoring</p>
+            <p class="text-sm max-w-[14rem]">We track your progress to reach your goals.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- ============ GALLERY ============ -->
+    <div id="gallery" class="bg-base-200 py-16 px-6">
+      <h2 class="text-3xl font-bold text-center mb-10">Gallery</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 max-w-4xl mx-auto">
+        <img src="images/gallery-1.webp" class="rounded-box aspect-square object-cover w-full" />
+        <img src="images/gallery-2.webp" class="rounded-box aspect-square object-cover w-full" />
+        <img src="images/gallery-3.webp" class="rounded-box aspect-square object-cover w-full" />
+        <img src="images/gallery-4.webp" class="rounded-box aspect-square object-cover w-full" />
+        <img src="images/gallery-5.webp" class="rounded-box aspect-square object-cover w-full" />
+        <img src="images/gallery-6.webp" class="rounded-box aspect-square object-cover w-full" />
+        <img src="images/gallery-7.webp" class="rounded-box aspect-square object-cover w-full" />
+        <img src="images/gallery-8.webp" class="rounded-box aspect-square object-cover w-full" />
+        <img src="images/gallery-9.webp" class="rounded-box aspect-square object-cover w-full" />
+      </div>
+    </div>
+
+    <!-- ============ CONTACT ============ -->
+    <div id="contact" class="hero bg-base-100 py-16">
+      <div class="hero-content flex-col lg:flex-row gap-10 min-w-0">
+        <div class="text-center lg:text-left min-w-0">
+          <h2 class="text-4xl font-bold">
+            Get In Touch!<br />Make An Appointment
+          </h2>
+          <p class="py-6">
+            Schedule your appointment with Move Better Physiotherapy &amp;
+            Rehabilitation Clinic.
+          </p>
+          <img
+            src="images/hero-contact.webp"
+            class="max-w-xs rounded-lg shadow-xl"
+            alt="Doctor consulting a patient"
+          />
+          <div class="mt-6 space-y-1">
+            <p>📞 +91 9270117192</p>
+            <p>✉️ move.better.physiotherapy.pune@gmail.com</p>
+            <p>
+              📍 Shop No. 204, Brahma Business Park, Kalyani Nagar Rd,
+              Wadgaon Sheri, Pune, Maharashtra 411014
+            </p>
+          </div>
+        </div>
+        <div class="card bg-base-200 w-full max-w-xs sm:max-w-sm shadow-2xl">
+          <form
+            class="card-body"
+            onsubmit="alert('Thank you! We will contact you soon.'); return false;"
+          >
+            <fieldset class="fieldset">
+              <label class="label">Name</label>
+              <input type="text" class="input w-full" placeholder="Name" required />
+              <label class="label">Email</label>
+              <input type="email" class="input w-full" placeholder="Email" required />
+              <label class="label">Phone Number</label>
+              <input type="text" class="input w-full" placeholder="Phone Number" required />
+              <label class="label">Message</label>
+              <textarea class="textarea w-full" placeholder="Message"></textarea>
+              <button type="submit" class="btn btn-primary mt-4">Submit</button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ FOOTER ============ -->
+    <footer
+      class="footer sm:footer-horizontal bg-base-200 text-base-content p-10 border-t border-base-300"
+    >
+      <nav>
+        <img src="images/logo.webp" alt="Move Better logo" class="h-[58px] w-auto mb-2" />
+        <p>
+          We believe that movement is the foundation of a healthy and
+          independent life. Our mission is to make every life better by
+          restoring movement, reducing pain, and improving overall quality
+          of life.
+        </p>
+      </nav>
+      <nav>
+        <h6 class="footer-title">Quick Links</h6>
+        <a href="#home" class="link link-hover">Home</a>
+        <a href="#about" class="link link-hover">About</a>
+        <a href="#services" class="link link-hover">Services</a>
+        <a href="#contact" class="link link-hover">Contact</a>
+      </nav>
+      <nav>
+        <h6 class="footer-title">Contact Us</h6>
+        <span>+91 9270117192</span>
+        <span>move.better.physiotherapy.pune@gmail.com</span>
+        <span>
+          Shop No. 204, Brahma Business Park, Kalyani Nagar Rd, Wadgaon
+          Sheri, Pune, Maharashtra 411014
+        </span>
+      </nav>
+    </footer>
+    <footer
+      class="footer bg-base-200 text-base-content border-base-300 border-t px-10 py-4"
+    >
+      <aside>
+        <p>Copyright © 2026 Move Better Physiotherapy Clinic. All rights reserved.</p>
+      </aside>
+    </footer>
   </body>
 </html>

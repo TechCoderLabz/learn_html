@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script>
+    let tasks = ["Typing Game", "Poki Games", "Music"]
+    window.addEventListener("load", function () {
+      console.log("Page is loaded")
+      pageIsLoaded()
+    });
+
+    function pageIsLoaded() {
+      let htmlString = "";
+      tasks.forEach(task => {
+        htmlString += '<li><input type="checkbox" checked="checked" class="checkbox">' + task + '</li>'
+      })
+      document.getElementById("taskList").innerHTML = htmlString
+    }
+  </script>
+</head>
+<body>
+  <ul id="taskList">
+    
+  </ul>
+</body>
+</html>

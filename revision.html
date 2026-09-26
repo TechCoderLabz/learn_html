@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    let students = []
+
+    function onLoad() {
+      students = JSON.parse(localStorage.getItem('students') ?? "[]")
+      loadStudentsInList()
+    }
+
+    function loadStudentsInList() {
+      let htmlString = ""
+      students.forEach((student, index) => {
+        htmlString += '<li>'+(index + 1)+'. '+ student.name + ' - '+ student.grade +'</li>'
+      })
+      document.getElementById("studentsUL").innerHTML = htmlString
+    }
+
+    function addStudent() {
+      let name = document.getElementById("inputName").value
+      let grade = document.getElementById("inputGrade").value
+      students.push({
+        name: name,
+        grade: grade
+      })
+      loadStudentsInList()
+    }
+
+    window.addEventListener('load', onLoad)
+  </script>
+</head>
+<body>
+  <input type="text" name="" id="inputName">
+  <input type="text" name="" id="inputGrade">
+  <button onclick="addStudent()">Add Student</button>
+  <ul id="studentsUL">
+
+  </ul>
+</body>
+</html>

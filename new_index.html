@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Website</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+
+  <script>
+    let tasks = ["Buy Milk & Coffee", "Go to Gym", "Read a book"]
+    
+    function addTaskButtonClicked() {
+      tasks.push(document.getElementById("taskTextInput").value)
+      console.log(tasks)
+      document.getElementById("listOfTasks").innerHTML = "";
+      tasks.forEach(task => {
+        document.getElementById("listOfTasks").innerHTML += " <label class=\"label\"><input type=\"checkbox\" class=\"checkbox\" />" + task + "</label>";
+      });
+    }
+
+    function removeButtonClicked() {
+      tasks.pop()
+      console.log(tasks)
+    }
+  </script>
+
+  <body>
+    <div>
+      <ul class="list bg-base-100 rounded-box shadow-md" id="listOfTasks">
+      </ul>
+    </div>
+
+    <input type="text" id="taskTextInput" placeholder="Type here" class="input" />
+    <button class="btn" onclick="addTaskButtonClicked()">Add Task</button>
+    <button class="btn" onclick="removeButtonClicked()">Remove Task</button>
+  </body>
+</html>
